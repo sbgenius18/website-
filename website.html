@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Shreyas
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@30,400,0,0&icon_names=account_circle" />
+    <style>
+      .selection-panel
+      {
+        position : fixed;
+        background-color: rgb(42, 42, 42);
+        width : 256px;
+        height : 120px;
+        border-radius: 8px;
+        left : calc(50vw - 128px);
+        top : calc(50vh - 60px);
+        visibility: hidden;
+      }
+      .add
+      {
+        position : absolute;
+        left : 10px;
+        bottom : 10px;
+        background-color: crimson;
+        width : 70px;
+        height : 30px;
+        border-color: crimson;
+        border: transparent;
+        border-radius : 3px;
+        color: white;
+        font-family: 'Roboto'; 
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .add:hover
+      {
+        background-color: rgb(200,18,50);
+      }
+      .add:active
+      {
+        background-color: rgb(180,16,40);
+      }
+      .cancel
+      {
+        position : absolute;
+        right : 10px;
+        bottom: 10px;
+        background-color: crimson;
+        width : 70px;
+        height : 30px;
+        border-color: crimson;
+        border: transparent;
+        border-radius : 3px;
+        color: white;
+        font-family: 'Roboto'; 
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .cancel:hover
+      {
+        background-color: rgb(200,18,50);
+      }
+      .cancel:active
+      {
+        background-color: rgb(180,16,40);
+      }
+      .quote
+      {
+        color: white;
+        font-family: 'Roboto'; 
+        line-height: 25px;
+        font-size: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 7px;
+      }
+      .username
+      {
+        color: rgb(109, 109, 255);
+        font-family: 'Roboto'; 
+        font-size: 18px;
+        font-weight: 300;
+      }
+      .body
+      {
+        background-color: rgb(65, 65, 65);
+      }
+      .topbar
+      {
+        position : fixed;
+        left : 0px;
+        right : 0px;
+        top : 0px;
+        height : 50px;
+        background-color: rgb(20, 20, 20);
+      }
+      .sidebar
+      {
+        position : fixed;
+        left : 0px;
+        top : 50px;
+        width : 50px;
+        height : 100%;
+        background-color: rgb(20, 20, 20);
+      }
+      .account-button 
+      {
+        position : absolute;
+        right : 0px;
+        height : 50px;
+        width : 50px;
+        background : none;
+        border: none;
+        cursor: pointer;
+        font-size: 0px;
+        color: white;
+      }
+      .account-button:hover 
+      {
+        background-color : rgb(40,40,40)
+      }
+      .account-button:active 
+      {
+        background-color : rgb(50,50,50)
+      }
+      .account-image
+      {
+        width : 36px;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="selection-panel" id="selection-panel">
+      <button class="add">
+        Add
+      </button>
+      <button class="cancel" id="cancel">
+        Cancel
+      </button>
+      <p class = "quote">
+        Are you sure you want to add <span class="username">sbgenius15</span> as a friend ?
+      </p>
+    </div>
+    <div class="topbar">
+      <button class="account-button" id="account-button">
+        <img src="acc_circle.svg" class="account-image">
+      </button>
+    </div>
+    <div class="sidebar"></div>
+    <script>
+      document.getElementById("account-button").addEventListener("click", function() 
+      {
+        document.getElementById("selection-panel").style.visibility = "visible";
+      });
+      document.getElementById("cancel").addEventListener("click", function() 
+      {
+        document.getElementById("selection-panel").style.visibility = "hidden";
+      }
+      
+    );
+    </script>
+  </body>
+</html>
